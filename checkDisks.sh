@@ -36,10 +36,9 @@ clean_message() {
 
 main_prog() {
 
-    ALERT1=70 # Nivel de alerta
-    ALERT2=80
-    ALERT3=90
-    ALERT4=100
+    ALERT1=80 # Nivel de alerta
+    ALERT2=90
+    ALERT3=100
 
     while read -r output; do
         #echo "Working on $output ..."
@@ -50,18 +49,14 @@ main_prog() {
         used=$(echo "$output" | awk '{print $5}')
         available=$(echo "$output" | awk '{print $6}')
 
-        if [ $usep -ge $ALERT4 ] ; then
-            message=$(clean_message $ALERT4)
-            mail "$message" "$ALERT4"
-            
-        elif [ $usep -ge $ALERT3 ] ; then
+        if [ $usep -ge $ALERT3 ] ; then
             message=$(clean_message $ALERT3)
             mail "$message" "$ALERT3"
             
         elif [ $usep -ge $ALERT2 ] ; then
             message=$(clean_message $ALERT2)
             mail "$message" "$ALERT2"
-
+            
         elif [ $usep -ge $ALERT1 ] ; then
             message=$(clean_message $ALERT1)
             mail "$message" "$ALERT1"
