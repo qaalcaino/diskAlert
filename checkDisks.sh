@@ -8,7 +8,7 @@ function mail() {
 
         # Datos Correo
         FROM="reportes@qinaya.tech" # Alias "reportes" de lostmail
-        SUBJECT="CYT $2 Alerta Disco" # Asunto
+        SUBJECT="CYT: cty-imagenes Alerta Disco $2" # Asunto
         TO="aalcaino@qinaya.tech" # Cliente
         DISTRIBUTION="cloudhelp@qinaya.tech" # Lista de distribución "cloudhelp"
         MESSAGE=$1 # Mensaje
