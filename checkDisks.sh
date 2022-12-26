@@ -8,7 +8,7 @@ function mail() {
 
         # Datos Correo
         FROM="reportes@qinaya.tech" # Alias "reportes" de lostmail
-        SUBJECT="Test Discos" # Asunto
+        SUBJECT="Alerta Disco $2" # Asunto
         TO="aalcaino@qinaya.tech" # Cliente
         DISTRIBUTION="cloudhelp@qinaya.tech" # Lista de distribución "cloudhelp"
         MESSAGE=$1 # Mensaje
@@ -52,19 +52,19 @@ main_prog() {
 
         if [ $usep -ge $ALERT4 ] ; then
             message=$(clean_message $ALERT4)
-            mail "$message"
+            mail "$message" "$ALERT4"
             
         elif [ $usep -ge $ALERT3 ] ; then
             message=$(clean_message $ALERT3)
-            mail "$message"
+            mail "$message" "$ALERT3"
             
         elif [ $usep -ge $ALERT2 ] ; then
             message=$(clean_message $ALERT2)
-            mail "$message"
+            mail "$message" "$ALERT2"
 
         elif [ $usep -ge $ALERT1 ] ; then
             message=$(clean_message $ALERT1)
-            mail "$message"
+            mail "$message" "$ALERT1"
 
         fi
     done
