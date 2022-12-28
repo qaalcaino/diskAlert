@@ -15,7 +15,7 @@ function mail() {
 
         echo -e "\nEnviando correo a $TO $DISTRIBUTION"
 
-        python3 ~/bin/diskAlert/sendEmail.py -u $USER -p $PASWD -f $FROM -t $TO -d $DISTRIBUTION -s "$SUBJECT" -m "$MESSAGE" 
+        python3 /bin/diskAlert/sendEmail.py -u $USER -p $PASWD -f $FROM -t $TO -d $DISTRIBUTION -s "$SUBJECT" -m "$MESSAGE" 
 
         if [ $? -eq 0 ]; then
                 echo -e "\nCorreo enviado"
