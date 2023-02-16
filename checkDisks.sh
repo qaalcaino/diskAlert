@@ -4,7 +4,7 @@ function mail() {
 
         # Credenciales
         USER="lostmail@qinaya.tech"
-        PASWD="DonBoricito.68"
+        PASWD="rwgrptrqnzbwqwbd"
 
         # Datos Correo
         FROM="reportes@qinaya.tech" # Alias "reportes" de lostmail
