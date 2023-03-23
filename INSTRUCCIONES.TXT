@@ -2,4 +2,4 @@
 
 2- Dar permisos de ejecucion al script: chmod +x checkDisks.sh
 
-3- Configurar crontab para que el script se ejecute cada 10 minutos: */10 * * * * /bin/bash ~/bin/diskAlert/checkDisks.sh
+3- Configurar crontab para que el script se ejecute cada 10 minutos: */10 * * * * /bin/bash /bin/diskAlert/checkDisks.sh
