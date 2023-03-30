@@ -14,9 +14,9 @@ function mail() {
 
 	if [ -z $option2  ] ; then
 	
-		SUBJECT="Cliente: $(hostname) Disco sobre $2%" # Asunto
+		SUBJECT="VCYT: imagenescyt Disco sobre $2%" # Asunto
 	else
-		SUBJECT="Cliente: $(hostname) Disco bajo $3%" # Asunto
+		SUBJECT="VCYT: imagenescyt Disco bajo $3%" # Asunto
 	fi
 	echo $SUBJECT
         TO="aalcaino@qinaya.tech" # Cliente
